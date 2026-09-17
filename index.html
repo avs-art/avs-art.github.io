@@ -1,61 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>avs-art</title>
-<style>
-  :root {
-    --bg: #fbfaf8;
-    --fg: #1a1917;
-    --muted: #6b6862;
-    --rule: #e2ded7;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --bg: #141312;
-      --fg: #f0ede8;
-      --muted: #918d85;
-      --rule: #2c2a27;
-    }
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    padding: 16px;
-    min-height: 100vh;
-    display: grid;
-    place-items: center;
-    background: var(--bg);
-    color: var(--fg);
-    font: 400 16px/1.6 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-  }
-  main { max-width: 32rem; text-align: center; }
-  h1 {
-    margin: 0 0 .5rem;
-    font-size: clamp(2rem, 8vw, 3.25rem);
-    font-weight: 300;
-    letter-spacing: -0.02em;
-  }
-  p { margin: 0; color: var(--muted); }
-  hr {
-    width: 3rem;
-    margin: 1.75rem auto;
-    border: 0;
-    border-top: 1px solid var(--rule);
-  }
-  code {
-    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-    font-size: .875em;
-  }
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Анастасия Докукина — Живопись</title>
+<meta name="description" content="Анастасия Докукина — авторская живопись маслом. Anastasia Dokukina — original oil paintings.">
+<meta name="theme-color" content="#e7e3ea">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Анастасия Докукина — Живопись">
+<meta property="og:image" content="https://avs-art.github.io/data/paintings/IMG_2387.webp">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23e7e3ea'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='Georgia,serif' font-size='20' fill='%232a2433'%3EА%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <main>
-    <h1>Hello, world</h1>
-    <p>avs-art is online.</p>
-    <hr>
-    <p>Served by GitHub Pages from <code>avs-art/avs-art.github.io</code></p>
-  </main>
+
+<nav class="topbar">
+  <button class="topbar__edit" id="edit-trigger" type="button" data-i18n="edit.open"></button>
+  <div class="lang" role="group" data-i18n-aria="lang.label">
+    <button type="button" data-set-lang="ru" lang="ru">RU</button>
+    <span aria-hidden="true">/</span>
+    <button type="button" data-set-lang="en" lang="en">EN</button>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <p class="hero__eyebrow" data-i18n="hero.eyebrow"></p>
+  <h1 class="hero__name" data-site="artistName"></h1>
+  <span class="rule" aria-hidden="true"></span>
+  <p class="hero__tagline" data-site="tagline"></p>
+  <a class="hero__cue" href="#about" data-i18n-aria="hero.cue"><span></span></a>
+</header>
+
+<main>
+  <section class="about" id="about">
+    <h2 class="eyebrow" data-i18n="about.eyebrow"></h2>
+    <div class="about__body reveal">
+      <div class="about__portrait" id="about-portrait"></div>
+      <div class="about__text">
+        <p class="about__bio" data-site="bio"></p>
+        <div class="edit-slot" id="site-edit-slot"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="works" id="works">
+    <h2 class="eyebrow" data-i18n="works.eyebrow"></h2>
+    <div class="works__list" id="works-list"></div>
+    <div class="edit-slot edit-slot--center" id="add-slot"></div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2 class="eyebrow" data-i18n="contact.eyebrow"></h2>
+    <p class="contact__lead" data-i18n="contact.lead"></p>
+    <p class="contact__note" data-site="contactNote"></p>
+    <p class="contact__links" id="contact-links"></p>
+  </section>
+</main>
+
+<footer class="footer" id="footer-credit"></footer>
+
+<script type="module" src="assets/js/app.js"></script>
 </body>
 </html>

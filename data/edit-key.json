@@ -1,0 +1,9 @@
+{
+  "v": 1,
+  "kdf": "PBKDF2-SHA256",
+  "iterations": 600000,
+  "cipher": "AES-256-GCM",
+  "salt": "0u+YlmA93lcjYf2JkvY1zg==",
+  "iv": "BMK5HLIBgHcMmW75",
+  "data": "PfZix1wnCG6jNwoxQP2SSfSobpOxkT4dndcw0jZWIWx7pT6+0/GI43enwG2mYgCm2ayzpmy6N7r54e/QveWH/r9PMaIEI0T/mpA4uM7H5OYIylsuq52wkxVqUkwIxxsIJaaxIKvdirqtUoAucQ=="
+}

@@ -1,0 +1,351 @@
+{
+  "site": {
+    "artistName": {
+      "ru": "Анастасия Докукина",
+      "en": "Anastasia Dokukina"
+    },
+    "tagline": {
+      "ru": "Живопись маслом: море, небо и свет",
+      "en": "Oil paintings of sea, sky and light"
+    },
+    "bio": {
+      "ru": "Здесь будет короткая биография. Несколько спокойных предложений о художнице, о море и лавандовых полях, которые вдохновляют её работы, и о живописи маслом.",
+      "en": "A short biography goes here. A few quiet sentences about the artist, the sea and lavender fields that inspire her work, and the practice of painting in oils."
+    },
+    "contactNote": {
+      "ru": "По вопросам приобретения картин, заказов и посещения мастерской.",
+      "en": "For acquisitions, commissions and studio visits."
+    },
+    "bioImage": "data/site/artist.webp",
+    "bioImageWidth": 1536,
+    "bioImageHeight": 2304,
+    "email": "avdokukina@email.com",
+    "instagram": "",
+    "usdRateFallback": 0.0119
+  },
+  "paintings": [
+    {
+      "slug": "untitled-i",
+      "name": {
+        "ru": "Без названия I",
+        "en": "Untitled I"
+      },
+      "description": {
+        "ru": "Холст, масло.",
+        "en": "Oil on canvas."
+      },
+      "date": "2026",
+      "price": 0,
+      "showPrice": true,
+      "status": "for_sale",
+      "img": "data/paintings/DSC_0856.webp",
+      "width": 1536,
+      "height": 2104,
+      "order": 10
+    },
+    {
+      "slug": "untitled-ii",
+      "name": {
+        "ru": "Без названия II",
+        "en": "Untitled II"
+      },
+      "description": {
+        "ru": "Холст, масло.",
+        "en": "Oil on canvas."
+      },
+      "date": "2026",
+      "price": 0,
+      "showPrice": true,
+      "status": "for_sale",
+      "img": "data/paintings/IMG_0706.webp",
+      "width": 1772,
+      "height": 1772,
+      "order": 20
+    },
+    {
+      "slug": "untitled-iii",
+      "name": {
+        "ru": "Без названия III",
+        "en": "Untitled III"
+      },
+      "description": {
+        "ru": "Холст, масло.",
+        "en": "Oil on canvas."
+      },
+      "date": "2026",
+      "price": 0,
+      "showPrice": true,
+      "status": "for_sale",
+      "img": "data/paintings/IMG_0707.webp",
+      "width": 1526,
+      "height": 2060,
+      "order": 30
+    },
+    {
+      "slug": "untitled-iv",
+      "name": {
+        "ru": "Без названия IV",
+        "en": "Untitled IV"
+      },
+      "description": {
+        "ru": "Холст, масло.",
+        "en": "Oil on canvas."
+      },
+      "date": "2026",
+      "price": 0,
+      "showPrice": true,
+      "status": "for_sale",
+      "img": "data/paintings/IMG_1029.webp",
+      "width": 2048,
+      "height": 1536,
+      "order": 40
+    },
+    {
+      "slug": "untitled-v",
+      "name": {
+        "ru": "Без названия V",
+        "en": "Untitled V"
+      },
+      "description": {
+        "ru": "Холст, масло.",
+        "en": "Oil on canvas."
+      },
+      "date": "2026",
+      "price": 0,
+      "showPrice": true,
+      "status": "for_sale",
+      "img": "data/paintings/IMG_1937.webp",
+      "width": 1536,
+      "height": 2048,
+      "order": 50
+    },
+    {
+      "slug": "untitled-vi",
+      "name": {
+        "ru": "Без названия VI",
+        "en": "Untitled VI"
+      },
+      "description": {
+        "ru": "Холст, масло.",
+        "en": "Oil on canvas."
+      },
+      "date": "2026",
+      "price": 0,
+      "showPrice": true,
+      "status": "for_sale",
+      "img": "data/paintings/IMG_2195.webp",
+      "width": 2529,
+      "height": 1243,
+      "order": 60
+    },
+    {
+      "slug": "untitled-vii",
+      "name": {
+        "ru": "Без названия VII",
+        "en": "Untitled VII"
+      },
+      "description": {
+        "ru": "Холст, масло.",
+        "en": "Oil on canvas."
+      },
+      "date": "2026",
+      "price": 0,
+      "showPrice": true,
+      "status": "for_sale",
+      "img": "data/paintings/IMG_2387.webp",
+      "width": 2704,
+      "height": 1536,
+      "order": 70
+    },
+    {
+      "slug": "untitled-viii",
+      "name": {
+        "ru": "Без названия VIII",
+        "en": "Untitled VIII"
+      },
+      "description": {
+        "ru": "Холст, масло.",
+        "en": "Oil on canvas."
+      },
+      "date": "2026",
+      "price": 0,
+      "showPrice": true,
+      "status": "for_sale",
+      "img": "data/paintings/IMG_3641.webp",
+      "width": 2678,
+      "height": 1536,
+      "order": 80
+    },
+    {
+      "slug": "untitled-ix",
+      "name": {
+        "ru": "Без названия IX",
+        "en": "Untitled IX"
+      },
+      "description": {
+        "ru": "Холст, масло.",
+        "en": "Oil on canvas."
+      },
+      "date": "2026",
+      "price": 0,
+      "showPrice": true,
+      "status": "for_sale",
+      "img": "data/paintings/IMG_4177.webp",
+      "width": 2348,
+      "height": 1537,
+      "order": 90
+    },
+    {
+      "slug": "untitled-x",
+      "name": {
+        "ru": "Без названия X",
+        "en": "Untitled X"
+      },
+      "description": {
+        "ru": "Холст, масло.",
+        "en": "Oil on canvas."
+      },
+      "date": "2026",
+      "price": 0,
+      "showPrice": true,
+      "status": "for_sale",
+      "img": "data/paintings/IMG_5543.webp",
+      "width": 1536,
+      "height": 2198,
+      "order": 100
+    },
+    {
+      "slug": "untitled-xi",
+      "name": {
+        "ru": "Без названия XI",
+        "en": "Untitled XI"
+      },
+      "description": {
+        "ru": "Холст, масло.",
+        "en": "Oil on canvas."
+      },
+      "date": "2026",
+      "price": 0,
+      "showPrice": true,
+      "status": "for_sale",
+      "img": "data/paintings/IMG_5795.webp",
+      "width": 1154,
+      "height": 3895,
+      "order": 110
+    },
+    {
+      "slug": "untitled-xii",
+      "name": {
+        "ru": "Без названия XII",
+        "en": "Untitled XII"
+      },
+      "description": {
+        "ru": "Холст, масло.",
+        "en": "Oil on canvas."
+      },
+      "date": "2026",
+      "price": 0,
+      "showPrice": true,
+      "status": "for_sale",
+      "img": "data/paintings/IMG_7061.webp",
+      "width": 2582,
+      "height": 1536,
+      "order": 120
+    },
+    {
+      "slug": "untitled-xiii",
+      "name": {
+        "ru": "Без названия XIII",
+        "en": "Untitled XIII"
+      },
+      "description": {
+        "ru": "Холст, масло.",
+        "en": "Oil on canvas."
+      },
+      "date": "2026",
+      "price": 0,
+      "showPrice": true,
+      "status": "for_sale",
+      "img": "data/paintings/IMG_7970.webp",
+      "width": 2048,
+      "height": 2048,
+      "order": 130
+    },
+    {
+      "slug": "untitled-xiv",
+      "name": {
+        "ru": "Без названия XIV",
+        "en": "Untitled XIV"
+      },
+      "description": {
+        "ru": "Холст, масло.",
+        "en": "Oil on canvas."
+      },
+      "date": "2026",
+      "price": 0,
+      "showPrice": true,
+      "status": "for_sale",
+      "img": "data/paintings/IMG_8091.webp",
+      "width": 1536,
+      "height": 2340,
+      "order": 140
+    },
+    {
+      "slug": "untitled-xv",
+      "name": {
+        "ru": "Без названия XV",
+        "en": "Untitled XV"
+      },
+      "description": {
+        "ru": "Холст, масло.",
+        "en": "Oil on canvas."
+      },
+      "date": "2026",
+      "price": 0,
+      "showPrice": true,
+      "status": "for_sale",
+      "img": "data/paintings/IMG_8274.webp",
+      "width": 2360,
+      "height": 1536,
+      "order": 150
+    },
+    {
+      "slug": "untitled-xvi",
+      "name": {
+        "ru": "Без названия XVI",
+        "en": "Untitled XVI"
+      },
+      "description": {
+        "ru": "Холст, масло.",
+        "en": "Oil on canvas."
+      },
+      "date": "2026",
+      "price": 0,
+      "showPrice": true,
+      "status": "for_sale",
+      "img": "data/paintings/IMG_9089.webp",
+      "width": 3128,
+      "height": 1536,
+      "order": 160
+    },
+    {
+      "slug": "untitled-xvii",
+      "name": {
+        "ru": "Без названия XVII",
+        "en": "Untitled XVII"
+      },
+      "description": {
+        "ru": "Холст, масло.",
+        "en": "Oil on canvas."
+      },
+      "date": "2026",
+      "price": 0,
+      "showPrice": true,
+      "status": "for_sale",
+      "img": "data/paintings/IMG_9099.webp",
+      "width": 2048,
+      "height": 1536,
+      "order": 170
+    }
+  ]
+}
