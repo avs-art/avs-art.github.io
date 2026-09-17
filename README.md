@@ -1,7 +1,7 @@
 avs-art
 =======
 
-Portfolio site of the painter Anastasia Dokukina — https://avs-art.github.io
+Portfolio site of the painter Anastasia Statsenko — https://avs-art.github.io
 
 Static site on GitHub Pages (deploy from `main`, root). No build step:
 `index.html` + `assets/` render everything from `data/db.json`.
