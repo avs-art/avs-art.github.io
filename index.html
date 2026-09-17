@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>avs-art</title>
+<style>
+  :root {
+    --bg: #fbfaf8;
+    --fg: #1a1917;
+    --muted: #6b6862;
+    --rule: #e2ded7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #141312;
+      --fg: #f0ede8;
+      --muted: #918d85;
+      --rule: #2c2a27;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 16px;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background: var(--bg);
+    color: var(--fg);
+    font: 400 16px/1.6 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  main { max-width: 32rem; text-align: center; }
+  h1 {
+    margin: 0 0 .5rem;
+    font-size: clamp(2rem, 8vw, 3.25rem);
+    font-weight: 300;
+    letter-spacing: -0.02em;
+  }
+  p { margin: 0; color: var(--muted); }
+  hr {
+    width: 3rem;
+    margin: 1.75rem auto;
+    border: 0;
+    border-top: 1px solid var(--rule);
+  }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: .875em;
+  }
+</style>
+</head>
+<body>
+  <main>
+    <h1>Hello, world</h1>
+    <p>avs-art is online.</p>
+    <hr>
+    <p>Served by GitHub Pages from <code>avs-art/avs-art.github.io</code></p>
+  </main>
+</body>
+</html>
