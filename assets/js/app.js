@@ -119,6 +119,39 @@ function observeReveals() {
   nodes.forEach((n) => revealObserver.observe(n));
 }
 
+// Thin line icons drawn to match the hairline rules of the site.
+const ICONS = {
+  phone: '<path d="M8.6 4.5H6.3a1.3 1.3 0 0 0-1.3 1.4c.5 7 6.1 12.6 13.1 13.1a1.3 1.3 0 0 0 1.4-1.3v-2.3a1.3 1.3 0 0 0-.9-1.2l-2.7-.9a1.3 1.3 0 0 0-1.3.3l-1.1 1.1a9.5 9.5 0 0 1-4.3-4.3l1.1-1.1a1.3 1.3 0 0 0 .3-1.3l-.9-2.7a1.3 1.3 0 0 0-1.2-.8Z"/>',
+  email: '<rect x="3.5" y="5.5" width="17" height="13" rx="1.5"/><path d="m4 7 8 6.5L20 7"/>',
+  instagram: '<rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.7"/><circle cx="16.7" cy="7.3" r=".6" fill="currentColor" stroke="none"/>',
+};
+
+function icon(name) {
+  const node = el('span', { class: 'contact__icon', 'aria-hidden': 'true' });
+  node.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round">${ICONS[name]}</svg>`;
+  return node;
+}
+
+// "+79166739764" → "+7 916 673-97-64"; anything else is shown as typed.
+function formatPhone(phone) {
+  const m = phone.replace(/[^\d+]/g, '').match(/^\+7(\d{3})(\d{3})(\d{2})(\d{2})$/);
+  return m ? `+7 ${m[1]} ${m[2]}-${m[3]}-${m[4]}` : phone;
+}
+
+// Accepts a handle, "@handle" or a full profile URL.
+const instagramHandle = (value) => value.trim().replace(/^https?:\/\/(www\.)?instagram\.com\//i, '').replace(/^@/, '').replace(/[/?#].*$/, '');
+
+function contactLinks(site) {
+  const handle = instagramHandle(site.instagram ?? '');
+  const item = (name, href, text, extra = {}) =>
+    el('a', { class: 'contact__link', href, ...extra }, icon(name), el('span', { text }));
+  return [
+    site.phone && item('phone', `tel:${site.phone.replace(/[^\d+]/g, '')}`, formatPhone(site.phone)),
+    site.email && item('email', `mailto:${site.email}`, site.email),
+    handle && item('instagram', `https://instagram.com/${handle}`, `@${handle}`, { target: '_blank', rel: 'noopener' }),
+  ].filter(Boolean);
+}
+
 export function renderSite(site = db.site) {
   const name = pick(site.artistName);
   for (const node of document.querySelectorAll('[data-site]')) {
@@ -138,18 +171,7 @@ export function renderSite(site = db.site) {
     })] : []),
   );
 
-  document.getElementById('contact-links').replaceChildren(
-    ...[
-      site.email && el('a', { class: 'link link--plain', href: `mailto:${site.email}`, text: site.email }),
-      site.instagram && el('a', {
-        class: 'link',
-        href: `https://instagram.com/${site.instagram.replace(/^@/, '')}`,
-        target: '_blank',
-        rel: 'noopener',
-        text: 'Instagram',
-      }),
-    ].filter(Boolean),
-  );
+  document.getElementById('contact-links').replaceChildren(...contactLinks(site));
   document.getElementById('footer-credit').textContent = `© ${new Date().getFullYear()} ${name}`.trim();
 }
 

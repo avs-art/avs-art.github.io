@@ -91,7 +91,8 @@ Data
 ----
 
 `site`: `artistName`, `tagline`, `bio`, `contactNote` (each `{ ru, en }`),
-`bioImage` (+ `bioImageWidth/Height`), `email`, `instagram`, `usdRateFallback`.
+`bioImage` (+ `bioImageWidth/Height`), `phone`, `email`, `instagram` (handle or
+profile URL), `usdRateFallback`.
 
 `paintings[]`: `slug`, `name {ru,en}`, `description {ru,en}`, `date`, `price`
 (RUB), `showPrice`, `status` (`for_sale` | `sold` | `on_order`), `img`,

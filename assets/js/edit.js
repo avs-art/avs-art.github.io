@@ -380,6 +380,8 @@ function openSite() {
 
   const email = el('input', { type: 'email', value: site.email ?? '', autocapitalize: 'off' });
   email.addEventListener('input', () => { site.email = email.value.trim(); refresh(); });
+  const phone = el('input', { type: 'tel', value: site.phone ?? '', autocomplete: 'off', placeholder: '+7' });
+  phone.addEventListener('input', () => { site.phone = phone.value.trim(); refresh(); });
   const instagram = el('input', { type: 'text', value: site.instagram ?? '', autocapitalize: 'off', spellcheck: false, placeholder: '@' });
   instagram.addEventListener('input', () => { site.instagram = instagram.value.trim(); refresh(); });
   const rate = el('input', { type: 'number', min: '0', step: '0.0001', inputMode: 'decimal', value: String(site.usdRateFallback ?? '') });
@@ -396,6 +398,7 @@ function openSite() {
   sheet(t('sheet.site'), [
     ...pairs,
     el('div', { class: 'field' }, el('span', { text: t('f.portrait') }), el('div', { class: 'sheet__image' }, thumb, replace)),
+    field(t('f.phone'), phone),
     field(t('f.email'), email),
     field(t('f.instagram'), instagram),
     field(t('f.usdRate'), rate, { hint: t('f.usdRateHint') }),
